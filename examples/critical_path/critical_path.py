@@ -11,7 +11,7 @@ minTime, maxTime, criticalPath = cpm.CPM(graph)
 
 formatLine = "%10s %10s %10s %10s"
 print(formatLine%("node", "minTime", "maxTime", "slack"))
-for node in graph.getNodes():
+for node in sorted(graph.getNodes(), key = lambda node : int(str(node))):
     print(formatLine%(node.label, minTime[node], maxTime[node], 
                       maxTime[node] - minTime[node]))
 
