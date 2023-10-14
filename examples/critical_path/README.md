@@ -31,4 +31,4 @@ An example of input file is *crit.txt*, that produces
 
 Critical Path : [ 1 2 4 6 8 9 11 ]
 ```
-
+:squid: [github.com/gian-teixeira/squid](https://github.com/gian-teixeira/squid)
