@@ -1,7 +1,8 @@
 import squid.base as sq
 import squid.cpm as cpm
+import sys
 
-vertex_list, edge_list = sq.Graph.readEdgeList('./crit.in')
+vertex_list, edge_list = sq.Graph.readEdgeList(sys.argv[1])
 graph = sq.Graph(nodes = vertex_list,
               edges = edge_list,
               weighted = True)
@@ -17,4 +18,4 @@ for node in graph.getNodes():
 print("\nCritical Path :", end = " ")
 sq.Graph.show(criticalPath)
 
-cpm.plotCP(graph)
+cpm.plotCP(graph, imagepath = 'critical_path.png')
